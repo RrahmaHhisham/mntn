@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* start navbar */
+/* background */
+.navbar-expand-lg {
+    background-color: black !important;
+    position: fixed !important;
+    width: 100%;
+    z-index: 999;
+}
+
+/* make text white on navbar */
+.container-fluid a {
+    color: white !important;
+
+}
+
+/* font size  */
+.container-fluid .navbar-brand {
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+.navbar-collapse ul li {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* background */
+.banner {
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    background-image: url(../photos/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* text background */
+.discription {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+.discription h2 {
+    text-transform: capitalize;
+    color: white;
+}
+
+/* end background */
+
+/* start cards */
+.section-one {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+
+}
+
+.card {
+    border: none !important;
+    padding-bottom: 50px;
+    background-color: black !important;
+    color: white;
+}
+
+.section-one .card-body h5 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.section-one h5::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    top: 50%;
+}
+
+
+#check {
+    display: none;
+}
+
+.card-body .content {
+    display: none;
+    transition: .5s linear;
+
+}
+
+label {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+#check:checked~.content {
+    display: block;
+}
+
+#check:checked~label {
+    visibility: hidden;
+}
+
+#check:checked~label::after {
+    content: ' Less Than';
+    color: white;
+    display: block;
+    visibility: visible;
+}
+
+.col-md-4 img {
+    position: relative;
+}
+
+
+
+/* reed more section-two */
+
+.section-two {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+
+}
+
+.card {
+    border: none !important;
+    padding-bottom: 50px;
+    background-color: black !important;
+    color: white;
+}
+
+.section-two .card-body h5 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.section-two h5::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    top: 50%;
+}
+
+#check-2 {
+    display: none;
+}
+
+.card-body .content-2 {
+    display: none;
+    transition: .5s linear;
+
+}
+
+/* label reed more */
+.section-2 {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+
+#check-2:checked~.content-2 {
+    display: block;
+}
+
+#check-2:checked~label {
+    visibility: hidden;
+}
+
+#check-2:checked~label::after {
+    content: ' Less Than';
+    color: white;
+    display: block;
+    visibility: visible;
+}
+
+/* end section-2 */
+
+/* start section-3 */
+#check-3 {
+    display: none;
+}
+
+.card-body .content-3 {
+    display: none;
+    transition: .5s linear;
+
+}
+
+.section-3 {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+#check-3:checked~.content-3 {
+    display: block;
+}
+
+#check-3:checked~label {
+    visibility: hidden;
+}
+
+#check-3:checked~label::after {
+    content: ' Less Than';
+    color: white;
+    display: block;
+    visibility: visible;
+}
+
+/* end section-3 */
+
+@media (max-width: 767px) {
+    .banner {
+        background-color: black;
+        background-size: contain;
+        min-height: 50vh;
+    }
+
+    .discription {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+
+    .discription h2 {
+        text-transform: capitalize;
+        color: white;
+        font-size: 15px;
+    }
+
+    /* card one and three */
+    .section-one .card-body h5 {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+    }
+
+    .section-one h5::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        display: block;
+        top: 50%;
+    }
+
+    .section-one .card {
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        height: 500px;
+    }
+
+    .section-one .card .card-body {
+        position: absolute;
+        width: 50%;
+        flex-direction: column;
+        right: 0;
+    }
+
+    .section-one .card img {
+        position: absolute;
+        width: 50%;
+
+    }
+
+    .section-one .card-body h2 {
+        font-size: 18px;
+    }
+
+    .section-one .card-body p {
+        font-size: small;
+    }
+
+    /* card two */
+    .section-two .card-body h5 {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+    }
+
+    .section-two h5::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        display: block;
+        top: 50%;
+    }
+
+    .section-two .card {
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        height: 500px;
+    }
+
+    .section-two .card .card-body {
+        position: absolute;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .section-two .card img {
+        position: absolute;
+        width: 50%;
+
+    }
+
+    .section-two .card .img-fluid {
+        right: 0;
+    }
+
+    .section-two .card-body h2 {
+        font-size: 18px;
+    }
+
+    .section-two .card-body p {
+        font-size: small;
+    }
+
+}
